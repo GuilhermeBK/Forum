@@ -1,0 +1,32 @@
+para rodar em localhost 
+pasta target
+
+java -jar -Dspring.profiles.active=prod forum-0.0.1-SNAPSHOT.jar
+
+precisa se autenticar 
+
+melhor abrir swagger e ler a doc
+
+tec usadas
+
+spring 2.3.1
+hibernate
+swagger2
+cache
+JWT
+spring segurity
+deploy em nuvem
+
+para rodar no docker: docker run -p 8080:8080 -e SPRING_PROFILES_ACTIVE='prod' forum
+ir na pasta forum
+para rodar no heroku: 
+heroku login
+heroku container:login
+heroku create forum-guilherme-api
+heroku git:remote -a forum-guilherme-api
+heroku container:push web
+heroku container:release web
+
+https://forum-guilherme-api.herokuapp.com/swagger-ui.html#/
+
+API REST SIMULANDO UM FORUM DE CURSOS
